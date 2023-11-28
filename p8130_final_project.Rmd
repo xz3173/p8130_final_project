@@ -1,11 +1,13 @@
 ---
 title: "p8130_final_project"
-author: "Xue Zhang"
 date: "2023-11-28"
-output: html_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 ```
 
+```{r}
+score_df = read_csv("./data/project_1_data.csv")
+```
