@@ -6,6 +6,11 @@ output: github_document
 
 ```{r setup, include=FALSE}
 library(tidyverse)
+library(ggplot2)
+library(gtsummary)
+library(ggridges)
+
+
 ```
 
 ```{r}
@@ -21,4 +26,16 @@ tbl_summary(
   ) %>%
 bold_labels()  %>%
 italicize_levels()
+
+long_data <- pivot_longer(proj1, 
+                          cols = c("ReadingScore", "WritingScore", "MathScore"), 
+                          names_to = "Exam", 
+                          values_to = "Score")
+
+# Create the ridgeline plot
+ggplot(long_data, aes(x = Score, y = Exam, fill = Exam)) +
+  geom_density_ridges() +
+  scale_fill_viridis_d() + # This adds a nice color scale, you can change it if you want
+  labs(title = 'Distribution of Scores by Exam', x = 'Score', y = 'Exam') +
+  theme_ridges() # This is a theme specifically designed for ridgeline plots
 ```
