@@ -20,6 +20,23 @@ score_df =
 ```
 
 ```{r}
+# Convert character to factor for regression analysis
+score_df = score_df |>
+  mutate(
+    gender = as.factor(gender),
+    ethnic_group = as.factor(ethnic_group),
+    parent_educ = as.factor(parent_educ),
+    lunch_type = as.factor(lunch_type),
+    test_prep = as.factor(test_prep),
+    parent_marital_status = as.factor(parent_marital_status),
+    practice_sport = as.factor(practice_sport),
+    is_first_child = as.factor(is_first_child),
+    transport_means = as.factor(transport_means),
+    wkly_study_hours = as.factor(wkly_study_hours)
+  )
+```
+
+```{r}
 # Check for missing data
 colSums(is.na(score_df))
 ```
