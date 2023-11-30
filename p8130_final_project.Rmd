@@ -28,6 +28,12 @@ bold_labels()  %>%
 italicize_levels()
 ```
 
+```{r}
+# Check for missing data
+colSums(is.na(score_df))
+```
+
+
 #Figure 1
 ```{R}
 
