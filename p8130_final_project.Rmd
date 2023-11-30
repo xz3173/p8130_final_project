@@ -96,6 +96,16 @@ score_df = score_df |>
 ```
 
 ```{r, include = FALSE}
+# Checking proportion of missing data for each variable
+prop_missing_each_column = colSums(is.na(score_df)) / nrow(score_df)
+
+prop_missing_total = sum(is.na(score_df)) / prod(dim(score_df))
+
+barplot(prop_missing_each_column, main="Proportion of Missing Data by Column", 
+        ylab="Proportion", xlab="Columns", las=2)
+```
+
+```{r, include = FALSE}
 # Impute missing values with the mode (the most frequently occurring category) or categorical variables
 
 # Function to compute mode
