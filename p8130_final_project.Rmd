@@ -14,8 +14,17 @@ library(ggridges)
 ```
 
 ```{r}
-score_df = read_csv("./data/project_1_data.csv")
+score_df = 
+  read_csv("./data/project_1_data.csv") |>
+  janitor::clean_names()
+```
 
+```{r}
+# Check for missing data
+colSums(is.na(score_df))
+```
+
+```{r}
 proj1=score_df
 proj1 %>%
 tbl_summary(
@@ -28,17 +37,14 @@ bold_labels()  %>%
 italicize_levels()
 ```
 
-```{r}
-# Check for missing data
-colSums(is.na(score_df))
-```
+
 
 
 #Figure 1
 ```{R}
 
 long_data <- pivot_longer(proj1, 
-                          cols = c("ReadingScore", "WritingScore", "MathScore"), 
+                          cols = c("reading_score", "writing_score", "math_score"), 
                           names_to = "Exam", 
                           values_to = "Score")
 bounds <- long_data %>%
