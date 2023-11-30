@@ -19,27 +19,7 @@ score_df =
 
 
 
-```{r, include = FALSE}
-# Convert character to factor for regression analysis
-score_df = score_df |>
-  mutate(
-    gender = as.factor(gender),
-    ethnic_group = as.factor(ethnic_group),
-    parent_educ = as.factor(parent_educ),
-    lunch_type = as.factor(lunch_type),
-    test_prep = as.factor(test_prep),
-    parent_marital_status = as.factor(parent_marital_status),
-    practice_sport = as.factor(practice_sport),
-    is_first_child = as.factor(is_first_child),
-    transport_means = as.factor(transport_means),
-    wkly_study_hours = as.factor(wkly_study_hours)
-  )
-```
 
-```{r, include = FALSE}
-# Check for missing data
-colSums(is.na(score_df))
-```
 
 
 
@@ -90,6 +70,31 @@ ggplot(long_data) +
 ```
 
 
+
+
+
+```{r, include = FALSE}
+# Check for missing data
+colSums(is.na(score_df))
+```
+
+```{r, include = FALSE}
+# Convert character to factor for regression analysis
+score_df = score_df |>
+  mutate(
+    gender = as.factor(gender),
+    ethnic_group = as.factor(ethnic_group),
+    parent_educ = as.factor(parent_educ),
+    lunch_type = as.factor(lunch_type),
+    test_prep = as.factor(test_prep),
+    parent_marital_status = as.factor(parent_marital_status),
+    practice_sport = as.factor(practice_sport),
+    is_first_child = as.factor(is_first_child),
+    transport_means = as.factor(transport_means),
+    wkly_study_hours = as.factor(wkly_study_hours)
+  )
+```
+
 ```{r, include = FALSE}
 # Impute missing values with the mode (the most frequently occurring category) or categorical variables
 
@@ -108,3 +113,27 @@ score_df = score_df |>
   mutate(parent_educ = ifelse(is.na(parent_educ), compute_mode(parent_educ), parent_educ))
 ```
 
+```{r, include = FALSE}
+# Histogram
+hist(score_df$nr_siblings, main="Histogram of nr_siblings", xlab="nr_siblings")
+
+# QQ Plot
+qqnorm(score_df$nr_siblings)
+qqline(score_df$nr_siblings, col="red")
+```
+
+**The histogram showed a right-skewed curve.**
+
+
+```{r, include = FALSE}
+# Shapiro-Wilk Test
+shapiro.test(score_df$nr_siblings)
+```
+
+**The p-value is less than 0.05, which indicates non-normality.**
+
+```{r, include = FALSE}
+# Median imputation for 'nr_siblings'
+median_siblings =  median(score_df$nr_siblings, na.rm = TRUE)
+score_df$nr_siblings[is.na(score_df$nr_siblings)] = median_siblings
+```
