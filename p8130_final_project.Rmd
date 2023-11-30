@@ -26,16 +26,34 @@ tbl_summary(
   ) %>%
 bold_labels()  %>%
 italicize_levels()
+```
+
+#Figure 1
+```{R}
 
 long_data <- pivot_longer(proj1, 
                           cols = c("ReadingScore", "WritingScore", "MathScore"), 
                           names_to = "Exam", 
                           values_to = "Score")
+bounds <- long_data %>%
+  group_by(Exam) %>%
+  summarize(Q1 = quantile(Score, probs = 0.25),
+            Q3 = quantile(Score, probs = 0.75)) %>%
+  mutate(IQR = Q3 - Q1,
+         LowerBound = Q1 - 1.5 * IQR,
+         UpperBound = Q3 + 1.5 * IQR) %>%
+  ungroup()
+
+# Add a column to the original data indicating outliers
+long_data <- long_data %>%
+  left_join(bounds, by = "Exam") %>%
+  mutate(Outlier = ifelse(Score < LowerBound | Score > UpperBound, TRUE, FALSE))
 
 # Create the ridgeline plot
-ggplot(long_data, aes(x = Score, y = Exam, fill = Exam)) +
-  geom_density_ridges() +
-  scale_fill_viridis_d() + # This adds a nice color scale, you can change it if you want
-  labs(title = 'Distribution of Scores by Exam', x = 'Score', y = 'Exam') +
-  theme_ridges() # This is a theme specifically designed for ridgeline plots
+ggplot(long_data) +
+  geom_density_ridges(aes(x = Score, y = Exam, fill = Exam)) +
+  geom_point(data = filter(long_data, Outlier), aes(x = Score, y = Exam, color = Exam), size = 2, shape = 21, show.legend = FALSE) +
+  scale_fill_viridis_d() + # Adds a nice color scale; change as needed
+  labs(title = 'Distribution of Scores by Exam with Outliers', x = 'Score', y = 'Exam') +
+  theme_ridges() # Theme for ridgeline plots
 ```
