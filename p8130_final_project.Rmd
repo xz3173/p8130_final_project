@@ -9,8 +9,6 @@ library(tidyverse)
 library(ggplot2)
 library(gtsummary)
 library(ggridges)
-
-
 ```
 
 ```{r}
@@ -19,7 +17,9 @@ score_df =
   janitor::clean_names()
 ```
 
-```{r}
+
+
+```{r, include = FALSE}
 # Convert character to factor for regression analysis
 score_df = score_df |>
   mutate(
@@ -36,10 +36,12 @@ score_df = score_df |>
   )
 ```
 
-```{r}
+```{r, include = FALSE}
 # Check for missing data
 colSums(is.na(score_df))
 ```
+
+
 
 ```{r}
 proj1=score_df
@@ -86,3 +88,23 @@ ggplot(long_data) +
   labs(title = 'Distribution of Scores by Exam with Outliers', x = 'Score', y = 'Exam') +
   theme_ridges() # Theme for ridgeline plots
 ```
+
+
+```{r, include = FALSE}
+# Impute missing values with the mode (the most frequently occurring category) or categorical variables
+
+# Function to compute mode
+compute_mode = function(x) {
+  tbl = table(na.omit(x))
+  as.character(names(tbl)[which.max(tbl)])
+}
+
+# Applying mode imputation to a specific column
+score_df = score_df |>
+  mutate(ethnic_group = ifelse(is.na(ethnic_group), compute_mode(ethnic_group), ethnic_group))
+
+# Repeat for other categorical variables
+score_df = score_df |>
+  mutate(parent_educ = ifelse(is.na(parent_educ), compute_mode(parent_educ), parent_educ))
+```
+
