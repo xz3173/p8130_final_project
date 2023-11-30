@@ -30,20 +30,20 @@ bold_labels()  %>%
 italicize_levels()
 ```
 
-<div id="biihwoalgd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#biihwoalgd table {
+<div id="wgvnaplmtm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wgvnaplmtm table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#biihwoalgd thead, #biihwoalgd tbody, #biihwoalgd tfoot, #biihwoalgd tr, #biihwoalgd td, #biihwoalgd th {
+&#10;#wgvnaplmtm thead, #wgvnaplmtm tbody, #wgvnaplmtm tfoot, #wgvnaplmtm tr, #wgvnaplmtm td, #wgvnaplmtm th {
   border-style: none;
 }
-&#10;#biihwoalgd p {
+&#10;#wgvnaplmtm p {
   margin: 0;
   padding: 0;
 }
-&#10;#biihwoalgd .gt_table {
+&#10;#wgvnaplmtm .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -68,11 +68,11 @@ italicize_levels()
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_caption {
+&#10;#wgvnaplmtm .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#biihwoalgd .gt_title {
+&#10;#wgvnaplmtm .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -83,7 +83,7 @@ italicize_levels()
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#biihwoalgd .gt_subtitle {
+&#10;#wgvnaplmtm .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -94,7 +94,7 @@ italicize_levels()
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#biihwoalgd .gt_heading {
+&#10;#wgvnaplmtm .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -105,12 +105,12 @@ italicize_levels()
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_bottom_border {
+&#10;#wgvnaplmtm .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_col_headings {
+&#10;#wgvnaplmtm .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -124,7 +124,7 @@ italicize_levels()
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_col_heading {
+&#10;#wgvnaplmtm .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -143,7 +143,7 @@ italicize_levels()
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#biihwoalgd .gt_column_spanner_outer {
+&#10;#wgvnaplmtm .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -154,13 +154,13 @@ italicize_levels()
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#biihwoalgd .gt_column_spanner_outer:first-child {
+&#10;#wgvnaplmtm .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#biihwoalgd .gt_column_spanner_outer:last-child {
+&#10;#wgvnaplmtm .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#biihwoalgd .gt_column_spanner {
+&#10;#wgvnaplmtm .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -171,10 +171,10 @@ italicize_levels()
   display: inline-block;
   width: 100%;
 }
-&#10;#biihwoalgd .gt_spanner_row {
+&#10;#wgvnaplmtm .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#biihwoalgd .gt_group_heading {
+&#10;#wgvnaplmtm .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -199,7 +199,7 @@ italicize_levels()
   vertical-align: middle;
   text-align: left;
 }
-&#10;#biihwoalgd .gt_empty_group_heading {
+&#10;#wgvnaplmtm .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -213,13 +213,13 @@ italicize_levels()
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#biihwoalgd .gt_from_md > :first-child {
+&#10;#wgvnaplmtm .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#biihwoalgd .gt_from_md > :last-child {
+&#10;#wgvnaplmtm .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#biihwoalgd .gt_row {
+&#10;#wgvnaplmtm .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -237,7 +237,7 @@ italicize_levels()
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#biihwoalgd .gt_stub {
+&#10;#wgvnaplmtm .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -249,7 +249,7 @@ italicize_levels()
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#biihwoalgd .gt_stub_row_group {
+&#10;#wgvnaplmtm .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -262,13 +262,13 @@ italicize_levels()
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#biihwoalgd .gt_row_group_first td {
+&#10;#wgvnaplmtm .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#biihwoalgd .gt_row_group_first th {
+&#10;#wgvnaplmtm .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#biihwoalgd .gt_summary_row {
+&#10;#wgvnaplmtm .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -277,14 +277,14 @@ italicize_levels()
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#biihwoalgd .gt_first_summary_row {
+&#10;#wgvnaplmtm .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_first_summary_row.thick {
+&#10;#wgvnaplmtm .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#biihwoalgd .gt_last_summary_row {
+&#10;#wgvnaplmtm .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -293,7 +293,7 @@ italicize_levels()
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_grand_summary_row {
+&#10;#wgvnaplmtm .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -302,7 +302,7 @@ italicize_levels()
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#biihwoalgd .gt_first_grand_summary_row {
+&#10;#wgvnaplmtm .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -311,7 +311,7 @@ italicize_levels()
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_last_grand_summary_row_top {
+&#10;#wgvnaplmtm .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -320,10 +320,10 @@ italicize_levels()
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_striped {
+&#10;#wgvnaplmtm .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#biihwoalgd .gt_table_body {
+&#10;#wgvnaplmtm .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -331,7 +331,7 @@ italicize_levels()
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_footnotes {
+&#10;#wgvnaplmtm .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -344,7 +344,7 @@ italicize_levels()
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_footnote {
+&#10;#wgvnaplmtm .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -352,7 +352,7 @@ italicize_levels()
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#biihwoalgd .gt_sourcenotes {
+&#10;#wgvnaplmtm .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -365,57 +365,57 @@ italicize_levels()
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#biihwoalgd .gt_sourcenote {
+&#10;#wgvnaplmtm .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#biihwoalgd .gt_left {
+&#10;#wgvnaplmtm .gt_left {
   text-align: left;
 }
-&#10;#biihwoalgd .gt_center {
+&#10;#wgvnaplmtm .gt_center {
   text-align: center;
 }
-&#10;#biihwoalgd .gt_right {
+&#10;#wgvnaplmtm .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#biihwoalgd .gt_font_normal {
+&#10;#wgvnaplmtm .gt_font_normal {
   font-weight: normal;
 }
-&#10;#biihwoalgd .gt_font_bold {
+&#10;#wgvnaplmtm .gt_font_bold {
   font-weight: bold;
 }
-&#10;#biihwoalgd .gt_font_italic {
+&#10;#wgvnaplmtm .gt_font_italic {
   font-style: italic;
 }
-&#10;#biihwoalgd .gt_super {
+&#10;#wgvnaplmtm .gt_super {
   font-size: 65%;
 }
-&#10;#biihwoalgd .gt_footnote_marks {
+&#10;#wgvnaplmtm .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#biihwoalgd .gt_asterisk {
+&#10;#wgvnaplmtm .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#biihwoalgd .gt_indent_1 {
+&#10;#wgvnaplmtm .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#biihwoalgd .gt_indent_2 {
+&#10;#wgvnaplmtm .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#biihwoalgd .gt_indent_3 {
+&#10;#wgvnaplmtm .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#biihwoalgd .gt_indent_4 {
+&#10;#wgvnaplmtm .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#biihwoalgd .gt_indent_5 {
+&#10;#wgvnaplmtm .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -590,6 +590,100 @@ ggplot(long_data) +
 
 ![](p8130_final_project_files/figure-gfm/unnamed-chunk-3-1.png)<!-- -->
 
+``` r
+# Check for missing data
+colSums(is.na(score_df))
+```
+
+    ##                gender          ethnic_group           parent_educ 
+    ##                     0                    59                    53 
+    ##            lunch_type             test_prep parent_marital_status 
+    ##                     0                    55                    49 
+    ##        practice_sport        is_first_child           nr_siblings 
+    ##                    16                    30                    46 
+    ##       transport_means      wkly_study_hours            math_score 
+    ##                   102                    37                     0 
+    ##         reading_score         writing_score 
+    ##                     0                     0
+
+``` r
+# Convert character to factor for regression analysis
+score_df_6 = score_df |>
+  mutate(
+    gender = as.factor(gender),
+    ethnic_group = as.factor(ethnic_group),
+    parent_educ = as.factor(parent_educ),
+    lunch_type = as.factor(lunch_type),
+    test_prep = as.factor(test_prep),
+    parent_marital_status = as.factor(parent_marital_status),
+    practice_sport = as.factor(practice_sport),
+    is_first_child = as.factor(is_first_child),
+    transport_means = as.factor(transport_means),
+    wkly_study_hours = as.factor(wkly_study_hours)
+  )
+```
+
+``` r
+# Checking proportion of missing data for each variable
+prop_missing_each_column = colSums(is.na(score_df_6)) / nrow(score_df_6)
+
+barplot(prop_missing_each_column, 
+        main="Proportion of Missing Data by Column", 
+        xlab="Columns",
+        ylab="Proportion")
+```
+
+![](p8130_final_project_files/figure-gfm/unnamed-chunk-6-1.png)<!-- -->
+
+``` r
+# Impute missing values with the mode (the most frequently occurring category) or categorical variables
+
+# Function to compute mode
+compute_mode = function(x) {
+  tbl = table(na.omit(x))
+  as.character(names(tbl)[which.max(tbl)])
+}
+
+# Applying mode imputation to a specific column
+score_df_6 = score_df_6 |>
+  mutate(ethnic_group = ifelse(is.na(ethnic_group), compute_mode(ethnic_group), ethnic_group))
+
+# Repeat for other categorical variables
+score_df_6 = score_df_6 |>
+  mutate(parent_educ = ifelse(is.na(parent_educ), compute_mode(parent_educ), parent_educ))
+```
+
+``` r
+# Histogram
+hist(score_df_6$nr_siblings, 
+     main="Histogram of nr_siblings", 
+     xlab="nr_siblings")
+```
+
+![](p8130_final_project_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+
+``` r
+# QQ Plot
+qqnorm(score_df_6$nr_siblings)
+qqline(score_df_6$nr_siblings, col="red")
+```
+
+![](p8130_final_project_files/figure-gfm/unnamed-chunk-8-2.png)<!-- -->
+
 **The histogram showed a right-skewed curve.**
 
 **The p-value is less than 0.05, which indicates non-normality.**
+
+``` r
+# Median imputation for `nr_sibling`
+median_siblings =  median(score_df_6$nr_siblings, na.rm = TRUE)
+score_df_6$nr_siblings[is.na(score_df_6$nr_siblings)] = median_siblings
+```
+
+``` r
+# The proportion of missing data for `practice_sport` is small (`16`), choose to remove those records.
+
+# `complete.cases() is used to find rows that have no missing values in the `practice_sport` column
+score_df_6 = score_df_6 |>
+  filter(complete.cases(practice_sport)) 
+```

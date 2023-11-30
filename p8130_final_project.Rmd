@@ -73,14 +73,14 @@ ggplot(long_data) +
 
 
 
-```{r, include = FALSE}
+```{r}
 # Check for missing data
 colSums(is.na(score_df))
 ```
 
-```{r, include = FALSE}
+```{r}
 # Convert character to factor for regression analysis
-score_df = score_df |>
+score_df_6 = score_df |>
   mutate(
     gender = as.factor(gender),
     ethnic_group = as.factor(ethnic_group),
@@ -95,17 +95,17 @@ score_df = score_df |>
   )
 ```
 
-```{r, include = FALSE}
+```{r}
 # Checking proportion of missing data for each variable
-prop_missing_each_column = colSums(is.na(score_df)) / nrow(score_df)
+prop_missing_each_column = colSums(is.na(score_df_6)) / nrow(score_df_6)
 
-prop_missing_total = sum(is.na(score_df)) / prod(dim(score_df))
-
-barplot(prop_missing_each_column, main="Proportion of Missing Data by Column", 
-        ylab="Proportion", xlab="Columns", las=2)
+barplot(prop_missing_each_column, 
+        main="Proportion of Missing Data by Column", 
+        xlab="Columns",
+        ylab="Proportion")
 ```
 
-```{r, include = FALSE}
+```{r}
 # Impute missing values with the mode (the most frequently occurring category) or categorical variables
 
 # Function to compute mode
@@ -115,21 +115,23 @@ compute_mode = function(x) {
 }
 
 # Applying mode imputation to a specific column
-score_df = score_df |>
+score_df_6 = score_df_6 |>
   mutate(ethnic_group = ifelse(is.na(ethnic_group), compute_mode(ethnic_group), ethnic_group))
 
 # Repeat for other categorical variables
-score_df = score_df |>
+score_df_6 = score_df_6 |>
   mutate(parent_educ = ifelse(is.na(parent_educ), compute_mode(parent_educ), parent_educ))
 ```
 
-```{r, include = FALSE}
+```{r}
 # Histogram
-hist(score_df$nr_siblings, main="Histogram of nr_siblings", xlab="nr_siblings")
+hist(score_df_6$nr_siblings, 
+     main="Histogram of nr_siblings", 
+     xlab="nr_siblings")
 
 # QQ Plot
-qqnorm(score_df$nr_siblings)
-qqline(score_df$nr_siblings, col="red")
+qqnorm(score_df_6$nr_siblings)
+qqline(score_df_6$nr_siblings, col="red")
 ```
 
 **The histogram showed a right-skewed curve.**
@@ -137,23 +139,23 @@ qqline(score_df$nr_siblings, col="red")
 
 ```{r, include = FALSE}
 # Shapiro-Wilk Test
-shapiro.test(score_df$nr_siblings)
+shapiro.test(score_df_6$nr_siblings)
 ```
 
 **The p-value is less than 0.05, which indicates non-normality.**
 
-```{r, include = FALSE}
+```{r}
 # Median imputation for `nr_sibling`
-median_siblings =  median(score_df$nr_siblings, na.rm = TRUE)
-score_df$nr_siblings[is.na(score_df$nr_siblings)] = median_siblings
+median_siblings =  median(score_df_6$nr_siblings, na.rm = TRUE)
+score_df_6$nr_siblings[is.na(score_df_6$nr_siblings)] = median_siblings
 ```
 
 
-```{r, include = FALSE}
+```{r}
 # The proportion of missing data for `practice_sport` is small (`16`), choose to remove those records.
 
 # `complete.cases() is used to find rows that have no missing values in the `practice_sport` column
-score_df = score_df |>
+score_df_6 = score_df_6 |>
   filter(complete.cases(practice_sport)) 
 ```
 
