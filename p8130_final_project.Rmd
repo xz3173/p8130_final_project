@@ -133,7 +133,17 @@ shapiro.test(score_df$nr_siblings)
 **The p-value is less than 0.05, which indicates non-normality.**
 
 ```{r, include = FALSE}
-# Median imputation for 'nr_siblings'
+# Median imputation for `nr_sibling`
 median_siblings =  median(score_df$nr_siblings, na.rm = TRUE)
 score_df$nr_siblings[is.na(score_df$nr_siblings)] = median_siblings
 ```
+
+
+```{r, include = FALSE}
+# The proportion of missing data for `practice_sport` is small (`16`), choose to remove those records.
+
+# `complete.cases() is used to find rows that have no missing values in the `practice_sport` column
+score_df = score_df |>
+  filter(complete.cases(practice_sport)) 
+```
+
