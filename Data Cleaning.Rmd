@@ -1,7 +1,8 @@
 ---
-title: "p8130_final_project"
-date: "2023-11-28"
-output: github_document
+title: "Data Cleaning"
+author: "Xue Zhang"
+date: "2023-12-01"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -16,81 +17,6 @@ score_df =
   read_csv("./data/project_1_data.csv") |>
   janitor::clean_names()
 ```
-
-
-
-
-
-
-
-```{r}
-proj1=score_df
-proj1 %>%
-tbl_summary(
-  missing_text = "(Missing)", # counts missing values
-  statistic = list(all_continuous() ~ "mean={mean} (min={min}, max={max}, sd={sd})",
-                   all_categorical() ~ "n={n} (p={p}%)") # stats for categorical
- # specify variables to include
-  ) %>%
-bold_labels()  %>%
-italicize_levels()
-
-proj1 = proj1[proj1['MathScore'] != 0,]
-
-```
-
-
-
-
-#Figure 1
-```{R}
-long_data <- pivot_longer(proj1, 
-                          cols = c("reading_score", "writing_score", "math_score"), 
-                          names_to = "Exam", 
-                          values_to = "Score")
-bounds <- long_data %>%
-  group_by(Exam) %>%
-  summarize(Q1 = quantile(Score, probs = 0.25),
-            Q3 = quantile(Score, probs = 0.75)) %>%
-  mutate(IQR = Q3 - Q1,
-         LowerBound = Q1 - 1.5 * IQR,
-         UpperBound = Q3 + 1.5 * IQR) %>%
-  ungroup()
-
-# Add a column to the original data indicating outliers
-long_data <- long_data %>%
-  left_join(bounds, by = "Exam") %>%
-  mutate(Outlier = ifelse(Score < LowerBound | Score > UpperBound, TRUE, FALSE))
-
-# Create the ridgeline plot
-ggplot(long_data) +
-  geom_density_ridges(aes(x = Score, y = Exam, fill = Exam)) +
-  geom_point(data = filter(long_data, Outlier), aes(x = Score, y = Exam, color = Exam), size = 2, shape = 21, show.legend = FALSE) +
-  scale_fill_viridis_d() + # Adds a nice color scale; change as needed
-  labs(title = 'Distribution of Scores by Exam with Outliers', x = 'Score', y = 'Exam') +
-  theme_ridges() # Theme for ridgeline plots
-```
-
-<<<<<<< HEAD
-#table 2
-```{R}
-proj1=score_df
-proj1 %>%
-tbl_summary(by="ParentEduc",
-            include=c("WritingScore","MathScore","ReadingScore","LunchType"),
-  missing_text = "(Missing)", # counts missing values
-  statistic = list(all_continuous() ~ "mean={mean} (min={min}, max={max}, sd={sd})",
-                   all_categorical() ~ "n={n} (p={p}%)") # stats for categorical
- # specify variables to include
-  ) %>%
-bold_labels()  %>%
-italicize_levels()
-```
-
-#Henry's code
-
-
-
 
 ```{r}
 # Check for missing data
@@ -178,4 +104,3 @@ score_df_6 = score_df_6 |>
   filter(complete.cases(practice_sport)) 
 ```
 
->>>>>>> c8dfd387b140b1a95bb6f2ee7137a75cd2402279
